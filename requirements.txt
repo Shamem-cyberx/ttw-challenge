@@ -1,0 +1,15 @@
+unsloth
+transformers
+datasets
+accelerate
+peft
+trl
+bitsandbytes
+torch
+evaluate
+sacrebleu
+rouge-score
+scikit-learn
+matplotlib
+seaborn
+pandas
