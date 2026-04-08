@@ -1,47 +1,68 @@
-## Tatweer Assignment – Challenge Option 2 (Generative AI)
+## Tatweer technical assessment — **Challenge 2 only** (Generative AI)
 
-This project fine-tunes a **small language model (<1B params)** using **parameter-efficient QLoRA** for a niche domain task:
+Fine-tune a **&lt;1B** instruction model with **QLoRA** (parameter-efficient) on a domain-specific task, with dataset splits, training stability, evaluation vs base model, and documentation.
 
-- **Task**: Domain-specific instruction following for **Windows PowerShell technical support + scripting**
-- **Output style**: Safe, step-by-step troubleshooting with copy/paste-ready PowerShell commands
+### Task
 
-### Folder structure (submission-ready)
+- **Domain**: Windows **PowerShell** technical support + scripting (instruction → response).
+- **Data**: 260 instruction–response pairs (220 / 20 / 20 train / validation / test), generated deterministically in `01_dataset_and_train.ipynb` (see `data/data_card.md`).
+
+### Why these settings (Colab **T4**, **&lt; 2h GPU** target)
+
+- **QLoRA** (4-bit + LoRA) fits free-tier VRAM.
+- **`max_seq_length=1024`**: sufficient for this dataset; faster than 2048 on T4.
+- **2 epochs** with **early stopping** on validation loss: completes quickly while still adapting.
+- First run pays a one-time cost: `pip install`, Hugging Face model download (~minutes). **Re-running** training in the same session is much shorter.
+
+### Repo layout
 
 ```
-your-name-challenge/
 ├── README.md
+├── CHALLENGE2_CHECKLIST.md   # maps rubric → files
 ├── requirements.txt
+├── model_card.md
 ├── notebooks/
 │   ├── 01_dataset_and_train.ipynb
 │   └── 02_evaluation.ipynb
 ├── data/
 │   ├── data_card.md
-│   └── processed/
-│       ├── train.jsonl
-│       ├── valid.jsonl
-│       └── test.jsonl
-├── outputs/
-│   ├── loss_curve.png
-│   ├── eval_metrics.json
-│   └── qualitative_examples.md
-└── model_card.md
+│   └── processed/            # filled after notebook 01
+├── scripts/
+│   └── generate_dataset.py
+└── outputs/                  # filled after runs (gitignored)
 ```
 
-### Quick start (Colab)
+### Colab — recommended workflow
 
-1. Open `notebooks/01_dataset_and_train.ipynb` in Colab.
-2. Run all cells (it will):
-   - Generate/refresh the dataset into `data/processed/`
-   - Fine-tune using **Unsloth + QLoRA**
-   - Save LoRA adapters + training logs
-3. Open `notebooks/02_evaluation.ipynb` in Colab.
-4. Run all cells (it will):
-   - Evaluate **base vs fine-tuned** on the held-out test set
-   - Produce **BLEU + ROUGE-L + a domain format metric**
-   - Save plots and outputs into `outputs/`
+1. **Runtime → Change runtime type → GPU** (pick **T4** if offered).
+2. **Runtime → Restart session** after switching GPU.
+3. Clone and enter the repo:
 
-### Notes
+```bash
+%cd /content
+!git clone https://github.com/Shamem-cyberx/tatweer_challenge.git
+%cd /content/tatweer_challenge/notebooks
+```
 
-- **No full fine-tuning**: training is QLoRA (4-bit base weights + LoRA adapters).
-- **Colab free tier**: the defaults are chosen to finish within typical free tier limits.
-- Replace `your-name-challenge` with your actual submission folder name if needed.
+4. Open **`01_dataset_and_train.ipynb`** → **Runtime → Run all**.
+5. Open **`02_evaluation.ipynb`** → **Runtime → Run all**.
+
+Artifacts (under `/content/tatweer_challenge/`):
+
+- `data/processed/*.jsonl`
+- `outputs/lora_adapters/`
+- `outputs/loss_curve.png`
+- `outputs/eval_metrics.json`
+- `outputs/qualitative_examples.md`
+
+### Optional: save to Google Drive
+
+At the **end** of notebook 01, set `SAVE_TO_DRIVE = True` in the last cell, run it, and approve the Drive prompt — or zip/download `/content/tatweer_challenge` from Colab’s file browser.
+
+### Local (optional)
+
+If Python is available: `python scripts/generate_dataset.py` writes `data/processed/*.jsonl`.
+
+### Rubric mapping
+
+See **`CHALLENGE2_CHECKLIST.md`**.
