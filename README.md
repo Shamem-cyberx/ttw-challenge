@@ -40,9 +40,11 @@ Fine-tune a **&lt;1B** instruction model with **QLoRA** (parameter-efficient) on
 
 ```bash
 %cd /content
-!git clone https://github.com/Shamem-cyberx/tatweer_challenge.git
+!git clone https://github.com/shamemdeen/ttw-challenge.git tatweer_challenge
 %cd /content/tatweer_challenge/notebooks
 ```
+
+Canonical repo: [shamemdeen/ttw-challenge](https://github.com/shamemdeen/ttw-challenge).
 
 4. Open **`01_dataset_and_train.ipynb`** → **Runtime → Run all**.
 5. Open **`02_evaluation.ipynb`** → **Runtime → Run all**.
