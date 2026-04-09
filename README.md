@@ -52,7 +52,9 @@ Artifacts (under `/content/tatweer_challenge/`):
 - `data/processed/*.jsonl`
 - `outputs/lora_adapters/`
 - `outputs/loss_curve.png`
-- `outputs/eval_metrics.json`
+- `outputs/trainer_log_history.json`, `outputs/training_summary.json`
+- `outputs/eval_metrics.json` (includes `meta`, `warnings`, corpus metrics)
+- `outputs/challenge2_output_manifest.json` (after artifact check cell in **02**)
 - `outputs/qualitative_examples.md`
 
 ### Optional: save to Google Drive

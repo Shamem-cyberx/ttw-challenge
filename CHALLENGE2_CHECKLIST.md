@@ -17,6 +17,8 @@ This repo targets **Technical Assignment — Option 2** only: **fine-tune a &lt;
 | Early stopping | `EarlyStoppingCallback` on validation loss |
 | Checkpoints | `outputs/checkpoints/` + `save_total_limit` |
 | Loss curves | `outputs/loss_curve.png` + `trainer_log_history.json` |
+| Training summary (final metrics) | `outputs/training_summary.json` (written by notebook **01** after `train()`) |
+| Eval + artifact audit | `outputs/eval_metrics.json` (`meta`, `warnings`, `base`, `fine_tuned`), `outputs/challenge2_output_manifest.json` (notebook **02**) |
 | Metrics ≥ 2 task-specific | **BLEU**, **ROUGE-L**, **format compliance** (code fences + cmdlet-like tokens) |
 | Base vs fine-tuned | `02_evaluation.ipynb` |
 | Qualitative + error analysis | `outputs/qualitative_examples.md` |

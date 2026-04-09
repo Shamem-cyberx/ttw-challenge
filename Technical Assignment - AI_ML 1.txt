@@ -1,0 +1,210 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+CONTENTS
+1	CONGRATULATIONS!	3
+2	ASSESSMENT OVERVIEW	4
+3	INSTRUCTIONS	5
+4	CHALLENGE OPTION 1: COMPUTER VISION	6
+4.1	NEAR-MISS INCIDENT DETECTION	6
+4.1.1	Challenge Overview	6
+4.1.2	Core Requirements	6
+4.1.3	Technical Constraints	6
+4.1.4	Bonus Challenges (Choose 2+)	7
+4.1.5	Deliverables	7
+4.1.6	Evaluation Criteria	7
+5	CHALLENGE OPTION 2: GENERATIVE AI	8
+5.1	FINE-TUNING A SMALL LANGUAGE MODEL	8
+5.1.1	Challenge Overview	8
+5.1.2	Core Requirements	8
+5.1.3	Technical Constraints	9
+5.1.4	Bonus Challenges (Choose 2+)	9
+5.1.5	Deliverables	9
+5.1.6	Evaluation Criteria	10
+6	SUBMISSION GUIDELINES	11
+6.1.1	Submission Checklist	11
+6.1.2	File Organization	11
+7	NEXT STEPS	12
+8	QUESTIONS?	13
+
+1 CONGRATULATIONS!
+Thank you for your interest in joining Tatweer Middle East & Africa as an AI/ML Engineer. We are impressed with your application and are excited to move forward with the next stage of our selection process.
+At Tatweer, we work on cutting-edge AI and machine learning solutions for government and enterprise clients across the UAE and the broader region. Our projects demand technical excellence, creative problem-solving, and the ability to deliver production-ready systems that make a real impact.
+2 ASSESSMENT OVERVIEW
+This technical assessment is designed to evaluate your practical skills in AI/ML engineering. You will choose one challenge from two options: Computer Vision or Generative AI.
+Timeline7 days from receipt of this documentTime Commitment4-6 hours (self-paced)EnvironmentGoogle Colab (free tier) or local CPUCostNo external APIs or paid services required
+3 INSTRUCTIONS
+☐ Read both challenge options carefully
+☐ Choose ONE challenge that best showcases your strengths
+☐ Complete all core requirements (bonus challenges are optional)
+☐ Submit your work within 7 days via the link provided in your email
+☐ Include all deliverables as specified in your chosen challenge
+Important: This is an individual assessment. While you may reference documentation and libraries, all code and analysis must be your original work. We value honesty and clear communication about your approach and any challenges you encountered.
+4 CHALLENGE OPTION 1: COMPUTER VISION
+4.1 NEAR-MISS INCIDENT DETECTION
+Time Allocation: 4-5 hours
+4.1.1 CHALLENGE OVERVIEW
+You will receive a 2-3 minute video clip showing traffic near-miss incidents. Your task is to build a system that automatically detects and analyzes these safety events. Near-miss incidents are situations where an accident almost occurred but was narrowly avoided-these are critical early warning signals for preventing future accidents.
+Video: https://www.youtube.com/watch?v=r86kxxU-LUY
+4.1.2 CORE REQUIREMENTS
+1. Object Detection & Tracking (40%)
+• Implement vehicle/person detection using a pre-trained model (YOLO, Faster R-CNN, or similar)
+• Track detected objects across frames (centroid tracking, SORT, DeepSORT, or equivalent)
+• Handle occlusions and varying lighting conditions
+• Must work on CPU (lightweight models preferred)
+2. Near-Miss Detection Logic (35%)
+• Define and implement near-miss criteria based on:
+      • Proximity between objects (distance thresholds)
+      • Speed/trajectory anomalies
+      • Time-to-collision (TTC) estimation
+• Flag incidents with timestamps
+• Calculate risk scores (high/medium/low)
+3. Visualization & Analysis (25%)
+• Annotate detected near-misses on video with bounding boxes
+• Generate summary statistics:
+      • Total near-miss count
+      • Risk distribution
+      • Temporal analysis (when incidents occur)
+• Create a simple dashboard or report with visualizations
+4.1.3 TECHNICAL CONSTRAINTS
+• Must run on Google Colab free tier (no GPU required) or local CPU
+• Use OpenCV, PyTorch/TensorFlow, or similar open-source libraries
+• Total inference time should be < 5 minutes for 2-3 minute video
+• Output: Annotated video + analysis report
+4.1.4 BONUS CHALLENGES (CHOOSE 2+)
+• Multi-class detection: Differentiate vehicle types, pedestrians, cyclists
+• Optical flow analysis: Use motion vectors for better near-miss prediction
+• False positive reduction: Implement filtering logic to reduce false alarms
+• Severity classification: ML-based severity scoring beyond simple thresholds
+• Real-time capability: Optimize for real-time processing (>15 FPS)
+4.1.5 DELIVERABLES
+1. Jupyter Notebook:
+• Well-documented code with markdown explanations
+• Clear section breaks (preprocessing, detection, analysis)
+• Requirements.txt or environment.yml included
+2. Outputs:
+• Annotated video showing detections
+• Summary report (PDF/HTML) with statistics and visualizations
+3. Demo Video (3 minutes max):
+• Show the system running on the provided video
+• Explain one technical challenge and how you solved it
+• Discuss limitations and potential improvements
+4.1.6 EVALUATION CRITERIA
+• Technical Implementation (40%): Detection accuracy, tracking stability, code quality and efficiency
+• Computer Vision Skills (35%): Model selection, handling edge cases, spatial-temporal analysis
+• Analysis & Communication (25%): Quality of insights, visualization clarity, presentation
+5 CHALLENGE OPTION 2: GENERATIVE AI
+5.1 FINE-TUNING A SMALL LANGUAGE MODEL
+Time Allocation: 5-6 hours
+5.1.1 CHALLENGE OVERVIEW
+Fine-tune a small language model (<1B parameters) for a domain-specific task using parameter-efficient methods. This challenge tests your understanding of modern LLM fine-tuning techniques, dataset preparation, and evaluation methodologies.
+5.1.2 CORE REQUIREMENTS
+1. Task Selection & Dataset Preparation (25%)
+Choose ONE task:
+• Code generation for specific framework/library
+• Domain-specific Q&A (medical, legal, technical support)
+• Style transfer (formal ↔ casual, technical ↔ layman)
+• Instruction following for niche domain
+Create or curate dataset:
+• Minimum 200 examples (train/validation/test split)
+• Proper formatting (instruction-response pairs)
+• Document data source and preprocessing steps
+• Quality over quantity-explain your curation process
+2. Fine-Tuning Implementation (40%)
+Use parameter-efficient fine-tuning:
+• LoRA/QLoRA (recommended for free tier)
+• Implement using Unsloth, PEFT, or HuggingFace Transformers
+• Document hyperparameters with justification:
+      • Learning rate, rank, alpha
+      • Batch size, epochs
+      • Target modules selection
+Training requirements:
+• Must complete training within Colab free tier limits
+• Implement early stopping
+• Save checkpoints properly
+3. Evaluation & Analysis (35%)
+Quantitative metrics:
+• Training/validation loss curves
+• At least 2 task-specific metrics (BLEU, ROUGE, accuracy, F1, etc.)
+• Comparison: base model vs fine-tuned model
+Qualitative analysis:
+• Show 5-10 example outputs (good and bad)
+• Error analysis-what did the model fail at?
+• Discuss overfitting indicators
+5.1.3 TECHNICAL CONSTRAINTS
+• Model size: <1B parameters (e.g., SmolLM-135M, Phi-2, Qwen-0.5B)
+• Must use LoRA/QLoRA (no full fine-tuning)
+• Training must complete in <2 hours on Colab free tier
+• Document all hyperparameter choices with reasoning
+5.1.4 BONUS CHALLENGES (CHOOSE 2+)
+• Data augmentation: Synthetic data generation, back-translation
+• Multi-task learning: Fine-tune on related tasks simultaneously
+• Inference optimization: Quantization, model merging for faster inference
+• Prompt engineering baseline: Compare against clever prompting without fine-tuning
+• Catastrophic forgetting analysis: Test on general capabilities post fine-tuning
+• Evaluation framework: Custom test suite with edge cases
+5.1.5 DELIVERABLES
+1. Training Notebook:
+• Data preparation pipeline
+• Training code with clear comments
+• Hyperparameter justification
+• Loss curves and metrics
+2. Evaluation Notebook:
+• Quantitative benchmarks
+• Qualitative examples
+• Error analysis
+• Base model comparison
+3. Model Card (Markdown):
+• Model details (base model, LoRA config)
+• Intended use and limitations
+• Training data description
+• Performance metrics
+• Example usage code
+4. Dataset:
+• Curated/processed dataset (if size allows)
+• OR download script + preprocessing code
+• Data card explaining source and format
+5.1.6 EVALUATION CRITERIA
+• ML Engineering (40%): Dataset quality, hyperparameter selection, training stability, understanding of LoRA/PEFT
+• Evaluation Rigor (30%): Metrics selection, statistical significance, error analysis, honest limitations assessment
+• Communication (30%): Documentation clarity, reproducibility, insightful discussion, model card quality
+6 SUBMISSION GUIDELINES
+Please submit your completed assessment via the secure link provided in your email. Ensure all deliverables are included and properly organized.
+6.1.1 SUBMISSION CHECKLIST
+☐ All required notebooks/code files
+☐ Output files (annotated video, model card, etc.)
+☐ Demo video (if applicable)
+☐ README.md with setup instructions
+☐ Requirements.txt or environment.yml
+6.1.2 FILE ORGANIZATION
+Please organize your submission as follows:
+your-name-challenge/
+├── README.md
+├── requirements.txt
+├── notebooks/
+├── data/ (or data download script)
+├── outputs/
+└── demo_video.mp4 (if applicable)
+7 NEXT STEPS
+After you submit your assessment, our technical team will review your work within 5 business days. If your submission meets our standards, we will invite you for a technical interview where we will:
+• Discuss your approach and technical decisions
+• Explore how you handled challenges
+• Understand your thought process and problem-solving methodology
+• Learn about your interests and career goals
+8 QUESTIONS?
+If you have any questions about the assessment or need clarification on any requirements, please don't hesitate to reach out to us at recruitment@tatweer.ae.
+We look forward to seeing your work and potentially welcoming you to the Tatweer team!
+Best regards,
+The Tatweer AI/ML Team
+

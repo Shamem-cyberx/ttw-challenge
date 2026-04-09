@@ -3,3 +3,10 @@
 .ipynb_checkpoints/
 outputs/
 .DS_Store
+
+# Local notebook / HF cache (do not commit)
+notebooks/huggingface_tokenizers_cache/
+notebooks/unsloth_compiled_cache/
+
+# Assignment source (keep .txt in repo; omit heavy binary)
+Technical Assignment - AI_ML 1.docx
