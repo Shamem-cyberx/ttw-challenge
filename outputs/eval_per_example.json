@@ -1,0 +1,182 @@
+[
+  {
+    "idx": 0,
+    "category": "services",
+    "rougeL_base": 0.1374570446735395,
+    "rougeL_finetuned": 0.6736842105263159,
+    "delta_rougeL": 0.5362271658527764,
+    "pred_chars_base": 1210,
+    "pred_chars_ft": 1225
+  },
+  {
+    "idx": 1,
+    "category": "processes",
+    "rougeL_base": 0.13186813186813187,
+    "rougeL_finetuned": 0.6981818181818182,
+    "delta_rougeL": 0.5663136863136864,
+    "pred_chars_base": 1036,
+    "pred_chars_ft": 1151
+  },
+  {
+    "idx": 2,
+    "category": "network",
+    "rougeL_base": 0.10810810810810811,
+    "rougeL_finetuned": 0.08849557522123894,
+    "delta_rougeL": -0.019612532886869177,
+    "pred_chars_base": 1261,
+    "pred_chars_ft": 110
+  },
+  {
+    "idx": 3,
+    "category": "permissions",
+    "rougeL_base": 0.14285714285714285,
+    "rougeL_finetuned": 0.6620689655172414,
+    "delta_rougeL": 0.5192118226600986,
+    "pred_chars_base": 1269,
+    "pred_chars_ft": 1255
+  },
+  {
+    "idx": 4,
+    "category": "processes",
+    "rougeL_base": 0.13186813186813187,
+    "rougeL_finetuned": 0.6981818181818182,
+    "delta_rougeL": 0.5663136863136864,
+    "pred_chars_base": 1036,
+    "pred_chars_ft": 1151
+  },
+  {
+    "idx": 5,
+    "category": "processes",
+    "rougeL_base": 0.13186813186813187,
+    "rougeL_finetuned": 0.6981818181818182,
+    "delta_rougeL": 0.5663136863136864,
+    "pred_chars_base": 1036,
+    "pred_chars_ft": 1151
+  },
+  {
+    "idx": 6,
+    "category": "processes",
+    "rougeL_base": 0.13186813186813187,
+    "rougeL_finetuned": 0.6981818181818182,
+    "delta_rougeL": 0.5663136863136864,
+    "pred_chars_base": 1036,
+    "pred_chars_ft": 1151
+  },
+  {
+    "idx": 7,
+    "category": "processes",
+    "rougeL_base": 0.13186813186813187,
+    "rougeL_finetuned": 0.6981818181818182,
+    "delta_rougeL": 0.5663136863136864,
+    "pred_chars_base": 1036,
+    "pred_chars_ft": 1151
+  },
+  {
+    "idx": 8,
+    "category": "permissions",
+    "rougeL_base": 0.14285714285714285,
+    "rougeL_finetuned": 0.6620689655172414,
+    "delta_rougeL": 0.5192118226600986,
+    "pred_chars_base": 1269,
+    "pred_chars_ft": 1255
+  },
+  {
+    "idx": 9,
+    "category": "network",
+    "rougeL_base": 0.10810810810810811,
+    "rougeL_finetuned": 0.08849557522123894,
+    "delta_rougeL": -0.019612532886869177,
+    "pred_chars_base": 1261,
+    "pred_chars_ft": 110
+  },
+  {
+    "idx": 10,
+    "category": "processes",
+    "rougeL_base": 0.13186813186813187,
+    "rougeL_finetuned": 0.6981818181818182,
+    "delta_rougeL": 0.5663136863136864,
+    "pred_chars_base": 1036,
+    "pred_chars_ft": 1151
+  },
+  {
+    "idx": 11,
+    "category": "processes",
+    "rougeL_base": 0.13186813186813187,
+    "rougeL_finetuned": 0.6981818181818182,
+    "delta_rougeL": 0.5663136863136864,
+    "pred_chars_base": 1036,
+    "pred_chars_ft": 1151
+  },
+  {
+    "idx": 12,
+    "category": "disk",
+    "rougeL_base": 0.12592592592592594,
+    "rougeL_finetuned": 0.6832740213523131,
+    "delta_rougeL": 0.5573480954263872,
+    "pred_chars_base": 1059,
+    "pred_chars_ft": 1169
+  },
+  {
+    "idx": 13,
+    "category": "services",
+    "rougeL_base": 0.1374570446735395,
+    "rougeL_finetuned": 0.6736842105263159,
+    "delta_rougeL": 0.5362271658527764,
+    "pred_chars_base": 1210,
+    "pred_chars_ft": 1225
+  },
+  {
+    "idx": 14,
+    "category": "services",
+    "rougeL_base": 0.1374570446735395,
+    "rougeL_finetuned": 0.6736842105263159,
+    "delta_rougeL": 0.5362271658527764,
+    "pred_chars_base": 1210,
+    "pred_chars_ft": 1225
+  },
+  {
+    "idx": 15,
+    "category": "disk",
+    "rougeL_base": 0.12592592592592594,
+    "rougeL_finetuned": 0.6832740213523131,
+    "delta_rougeL": 0.5573480954263872,
+    "pred_chars_base": 1059,
+    "pred_chars_ft": 1169
+  },
+  {
+    "idx": 16,
+    "category": "permissions",
+    "rougeL_base": 0.14285714285714285,
+    "rougeL_finetuned": 0.6620689655172414,
+    "delta_rougeL": 0.5192118226600986,
+    "pred_chars_base": 1269,
+    "pred_chars_ft": 1255
+  },
+  {
+    "idx": 17,
+    "category": "network",
+    "rougeL_base": 0.10810810810810811,
+    "rougeL_finetuned": 0.08849557522123894,
+    "delta_rougeL": -0.019612532886869177,
+    "pred_chars_base": 1261,
+    "pred_chars_ft": 110
+  },
+  {
+    "idx": 18,
+    "category": "permissions",
+    "rougeL_base": 0.14285714285714285,
+    "rougeL_finetuned": 0.6620689655172414,
+    "delta_rougeL": 0.5192118226600986,
+    "pred_chars_base": 1269,
+    "pred_chars_ft": 1255
+  },
+  {
+    "idx": 19,
+    "category": "permissions",
+    "rougeL_base": 0.14285714285714285,
+    "rougeL_finetuned": 0.6620689655172414,
+    "delta_rougeL": 0.5192118226600986,
+    "pred_chars_base": 1269,
+    "pred_chars_ft": 1255
+  }
+]

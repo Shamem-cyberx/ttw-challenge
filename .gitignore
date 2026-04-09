@@ -1,12 +1,17 @@
-﻿__pycache__/
-*.pyc
+﻿# Python
+__pycache__/
+*.py[cod]
 .ipynb_checkpoints/
-outputs/
 .DS_Store
+venv/
+.env
 
-# Local notebook / HF cache (do not commit)
+# Notebook / local Hugging Face caches (never commit)
 notebooks/huggingface_tokenizers_cache/
 notebooks/unsloth_compiled_cache/
 
-# Assignment source (keep .txt in repo; omit heavy binary)
+# Do NOT ignore outputs/ — metrics, plots, adapters, and checkpoints are submission artifacts.
+# (If the repo gets too large for GitHub, use Git LFS for *.pt / *.safetensors or split release assets.)
+
+# Assignment source (optional heavy binary)
 Technical Assignment - AI_ML 1.docx

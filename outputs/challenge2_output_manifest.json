@@ -1,0 +1,51 @@
+{
+  "challenge": "Challenge 2",
+  "outputs_dir": "outputs",
+  "note": "Paths are relative to repository root. Regenerate this file by running the artifact-check cell in notebooks/02_evaluation.ipynb.",
+  "files": {
+    "lora_adapters/adapter_config.json": {
+      "exists": true,
+      "size_bytes": 1214
+    },
+    "lora_adapters/adapter_model.safetensors": {
+      "exists": true,
+      "size_bytes": 35237104
+    },
+    "training_summary.json": {
+      "exists": true,
+      "size_bytes": 1001
+    },
+    "trainer_log_history.json": {
+      "exists": true,
+      "size_bytes": 1241
+    },
+    "loss_curve.png": {
+      "exists": true,
+      "size_bytes": 44175
+    },
+    "eval_metrics.json": {
+      "exists": true,
+      "size_bytes": 567
+    },
+    "qualitative_examples.md": {
+      "exists": true,
+      "size_bytes": 22325
+    },
+    "eval_per_example.json": {
+      "exists": true,
+      "size_bytes": 4629
+    },
+    "eval_metrics_bar.png": {
+      "exists": true,
+      "size_bytes": 30325
+    },
+    "eval_rouge_delta_hist.png": {
+      "exists": true,
+      "size_bytes": 39078
+    },
+    "eval_loss_from_trainer_log.png": {
+      "exists": false,
+      "size_bytes": 0
+    }
+  }
+}

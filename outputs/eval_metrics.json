@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "challenge": "Challenge 2",
+    "test_jsonl": "data/processed/test.jsonl",
+    "n_test_examples": 20,
+    "saved_at_utc": "2026-04-09T11:22:47.614163+00:00",
+    "adapter_dir": "outputs/lora_adapters",
+    "adapter_weights_present": true
+  },
+  "warnings": [],
+  "base": {
+    "bleu": 2.921745571117932,
+    "rougeL_f": 0.13129549737797158,
+    "format_compliance": 0.6
+  },
+  "fine_tuned": {
+    "bleu": 48.34259856233734,
+    "rougeL_f": 0.5925352477403113,
+    "format_compliance": 0.85
+  }
+}

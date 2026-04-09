@@ -15,7 +15,7 @@ This repo targets **Technical Assignment — Option 2** only: **fine-tune a &lt;
 | Hyperparameters documented | Comments in `01_dataset_and_train.ipynb` + `model_card.md` |
 | Training &lt; ~2h on Colab free T4 | Defaults: **2 epochs**, `max_seq_length=1024`, early stopping on `eval_loss` |
 | Early stopping | `EarlyStoppingCallback` on validation loss |
-| Checkpoints | `outputs/checkpoints/` + `save_total_limit` |
+| Checkpoints | `outputs/checkpoints/` + `save_total_limit` (commit in repo for a complete bundle; optional Git LFS if large) |
 | Loss curves | `outputs/loss_curve.png` + `trainer_log_history.json` |
 | Training summary (final metrics) | `outputs/training_summary.json` (written by notebook **01** after `train()`) |
 | Eval + artifact audit | `outputs/eval_metrics.json` (`meta`, `warnings`, `base`, `fine_tuned`), `outputs/challenge2_output_manifest.json` (notebook **02**) |
