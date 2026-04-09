@@ -1,4 +1,4 @@
-## Tatweer technical assessment — **Challenge 2 only** (Generative AI)
+## Tatweer technical assessment — **Challenge 2 ** (Generative AI)
 
 The original assignment text is in `docs/assignment/Technical Assignment - AI_ML 1.txt`.
 
